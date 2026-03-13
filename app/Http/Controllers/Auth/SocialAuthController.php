@@ -38,6 +38,7 @@ class SocialAuthController extends Controller
 
         } catch (\Exception $e) {
             return redirect('/login')->withErrors(['error' => 'Ocurrió un error al autenticar con ' . $provider]);
+            // dd($e->getMessage());
         }
     }
 }
